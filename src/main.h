@@ -51,6 +51,10 @@ struct LockPoints;
 static const bool DEFAULT_WHITELISTRELAY = true;
 /** Default for DEFAULT_WHITELISTFORCERELAY. */
 static const bool DEFAULT_WHITELISTFORCERELAY = true;
+/** Minimum fee for transactions */
+static const unsigned int MIN_TX_FEE = 10000;
+/** Fee per kB */
+static const unsigned int TX_FEE_PER_KB = 50000;
 /** Default for -minrelaytxfee, minimum relay fee for transactions */
 static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 10000;
 //! -maxtxfee default
@@ -479,6 +483,10 @@ bool DisconnectBlock(const CBlock& block, CValidationState& state, const CBlockI
 /** Proof-of-stake checks */
 bool CheckStake(CBlock* pblock, CWallet& wallet, const CChainParams& chainparams);
 bool SignBlock(CBlock& block, CWallet& wallet, int64_t& nFees);
+
+/** Minimum fee for transaction to be accepted in a blockchain */
+CAmount GetMinFee(const CTransaction& tx, unsigned int nTimeTx);
+CAmount GetMinFee(size_t nBytes, uint32_t nTime);
 
 /** Check a block is completely valid from start to finish (only works on top of our current best block, with cs_main held) */
 bool TestBlockValidity(CValidationState& state, const CChainParams& chainparams, const CBlock& block, CBlockIndex* pindexPrev, bool fCheckPOW = true, bool fCheckMerkleRoot = true, bool fCheckSig = true);
