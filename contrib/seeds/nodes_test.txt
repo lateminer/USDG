@@ -1,0 +1,9 @@
+# List of fixed seed nodes for testnet
+
+# IPv4 nodes
+209.160.104.201
+209.160.104.202
+209.160.104.203
+209.160.104.204
+
+# IPv6 nodes

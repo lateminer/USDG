@@ -1,0 +1,21 @@
+Calculating main genesis block...
+Genesis block found!
+nonce: 528385
+time: 1657918800
+blockhash: 00000dc29655c1eb3594818f00d5567504f8cf14b2434872ae720ead236c06a6
+merklehash: 52e750b3cf3608fa79f8477485b4a778f38d6bde11c72b8affa1ab0a637af583
+
+Calculating testnet genesis block...
+Genesis block found!
+nonce: 64302
+time: 1657918880
+blockhash: 0000ade4522264c59ec4b4b92dd4c8e288302fea5ce9e3992edfdd50b9f3c29a
+merklehash: bcab77d090a581c608fc9ce97fff21297cc5e356155a5b299c2ebe4c4bf2c53a
+
+Calculating regtest genesis block...
+Genesis block found!
+nonce: 3727
+time: 1657918888
+blockhash: 0000a1bf5d560b48296fea38a31a750be5b958397c3e8d28db61d04eff33f875
+merklehash: c35c6ca889657bf233b0824161a2d1f91f4a0d9781084714dfe10bc98251a3a5
+
