@@ -47,8 +47,8 @@
 #include <atomic>
 #include <sstream>
 
-#include <boost/algorithm/string/replace.hpp>
 #include <boost/algorithm/string/join.hpp>
+#include <boost/algorithm/string/replace.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
 #include <boost/math/distributions/poisson.hpp>
@@ -547,8 +547,6 @@ void ProcessBlockAvailability(NodeId nodeid) {
         }
     }
 }
-
-
 
 /** Update tracking information about which blocks a peer is assumed to have. */
 void UpdateBlockAvailability(NodeId nodeid, const uint256 &hash) {
