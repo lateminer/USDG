@@ -60,13 +60,13 @@ dnl By default, libtool for mingw refuses to link static libs into a dll for
 dnl fear of mixing pic/non-pic objects, and import/export complications. Since
 dnl we have those under control, re-enable that functionality.
 dnl Compiler with posix support is needed for cross compile some of c++ 14 features for mingw like threads and mutexes.
-case $host in
-  *mingw*)
-     lt_cv_deplibs_check_method="pass_all"
-     CC="$CC-posix"
-     CXX="$CXX-posix"
-  ;;
-esac
+dnl case $host in
+dnl  *mingw*)
+dnl    lt_cv_deplibs_check_method="pass_all"
+dnl     CC="$CC-posix"
+dnl     CXX="$CXX-posix"
+dnl  ;;
+dnl esac
 
 AC_ARG_ENABLE([c++17],
   [AS_HELP_STRING([--enable-c++17],
