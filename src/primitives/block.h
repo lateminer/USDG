@@ -6,9 +6,11 @@
 #ifndef BITCOIN_PRIMITIVES_BLOCK_H
 #define BITCOIN_PRIMITIVES_BLOCK_H
 
-#include "primitives/transaction.h"
-#include "serialize.h"
-#include "uint256.h"
+#include <primitives/transaction.h>
+#include <serialize.h>
+#include <uint256.h>
+#include <arith_uint256.h>
+#include <hash.h>
 
 /** Nodes collect new transactions into a block, hash them into a hash tree,
  * and scan through nonce values to make the block's hash satisfy proof-of-work
@@ -70,14 +72,12 @@ public:
 };
 
 
-
 class CBlock : public CBlockHeader
 {
 public:
     // network and disk
     std::vector<CTransaction> vtx;
-
-    // network and disk
+    // ppcoin: block signature - signed by one of the coin base txout[N]'s owner
     std::vector<unsigned char> vchBlockSig;
 
     // memory only
@@ -111,7 +111,6 @@ public:
         fChecked = false;
     }
 
-    // two types of block: proof-of-work or proof-of-stake
     bool IsProofOfStake() const
     {
         return (vtx.size() > 1 && vtx[1].IsCoinStake());
@@ -170,6 +169,7 @@ struct CBlockLocator
     {
         return vHave.empty();
     }
+
 };
 
 #endif // BITCOIN_PRIMITIVES_BLOCK_H

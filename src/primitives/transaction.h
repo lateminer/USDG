@@ -6,10 +6,12 @@
 #ifndef BITCOIN_PRIMITIVES_TRANSACTION_H
 #define BITCOIN_PRIMITIVES_TRANSACTION_H
 
-#include "amount.h"
-#include "script/script.h"
-#include "serialize.h"
-#include "uint256.h"
+#include <amount.h>
+#include <script/script.h>
+#include <serialize.h>
+#include <uint256.h>
+#include <arith_uint256.h>
+#include <univalue/include/univalue.h>
 
 /** An outpoint - a combination of a transaction hash and an index n into its vout */
 class COutPoint
@@ -239,8 +241,8 @@ public:
     // structure, including the hash.
     const int32_t nVersion;
     unsigned int nTime;
-    const std::vector<CTxIn> vin;
-    const std::vector<CTxOut> vout;
+    std::vector<CTxIn> vin;
+    std::vector<CTxOut> vout;
     const uint32_t nLockTime;
 
     /** Construct a CTransaction that qualifies as IsNull() */
@@ -297,7 +299,7 @@ public:
 
     bool IsCoinStake() const
     {
-        // the coin stake transaction is marked with the first output empty
+        // ppcoin: the coin stake transaction is marked with the first output empty
         return (vin.size() > 0 && (!vin[0].prevout.IsNull()) && vout.size() >= 2 && vout[0].IsEmpty());
     }
 
@@ -318,7 +320,7 @@ public:
 struct CMutableTransaction
 {
     int32_t nVersion;
-    uint32_t nTime;
+    unsigned int nTime;
     std::vector<CTxIn> vin;
     std::vector<CTxOut> vout;
     uint32_t nLockTime;

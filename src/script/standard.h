@@ -6,8 +6,8 @@
 #ifndef BITCOIN_SCRIPT_STANDARD_H
 #define BITCOIN_SCRIPT_STANDARD_H
 
-#include "script/interpreter.h"
-#include "uint256.h"
+#include <script/interpreter.h>
+#include <uint256.h>
 
 #include <boost/variant.hpp>
 
@@ -17,6 +17,7 @@ static const bool DEFAULT_ACCEPT_DATACARRIER = true;
 
 class CKeyID;
 class CScript;
+class Key;
 
 /** A reference to a CScript: the Hash160 of its serialization (see script.h) */
 class CScriptID : public uint160
@@ -69,7 +70,7 @@ public:
  *  * CNoDestination: no destination set
  *  * CKeyID: TX_PUBKEYHASH destination
  *  * CScriptID: TX_SCRIPTHASH destination
- *  A CTxDestination is the internal data type encoded in a bitcoin address
+ *  A CTxDestination is the internal data type encoded in a USDG address
  */
 typedef boost::variant<CNoDestination, CKeyID, CScriptID> CTxDestination;
 
