@@ -159,7 +159,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x52e750b3cf3608fa79f8477485b4a778f38d6bde11c72b8affa1ab0a637af583"));
 
         vSeeds.push_back(CDNSSeedData("seed1.usdgcoin.org", "seed1.usdgcoin.org"));
-        vSeeds.push_back(CDNSSeedData("seed2.usdgcoin.org", "seed1.usdgcoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed2.usdgcoin.org", "seed2.usdgcoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed3.usdgcoin.org", "seed3.usdgcoin.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,68);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,130);
