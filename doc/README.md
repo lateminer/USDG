@@ -6,7 +6,7 @@ Setup
 USDG is an Blackcoin More fork and it builds the backbone of the USDG network. However, it downloads and stores the entire history of USDG transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
 To read about Blackcoin More, visit [blackcoinmore.org](https://blackcoinmore.org).
-To read about USDG, visit [usdgcoin.org](https://usdgcoin.org).
+To read about USDG, visit [usdigitalgold.org](https://usdigitalgold.org).
 
 Running
 ---------------------
