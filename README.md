@@ -1,13 +1,13 @@
 USDG
-USDG Coin
-USDG Foundation
+=====================================
 
-commit 5001feb5c27a17e00dcac6aba68ab844b394685b was final commit before transfering code over to USDG
+https://usdigitalgold.org
 
-https://github.com/USDI-AmericanFederalTrust/USDI/commit/5001feb5c27a17e00dcac6aba68ab844b394685b
+USDG Wallet
+----------------
 
-todo
+US Digital Gold is an asset-backed private digital currency, coins in circulation will be backed in fiat currency and other conservative, stable assets.
 
-- cleanup code further
-- create release notes
-- create official binaries
+The NotFiat treasury is independently audited on a quarterly basis to ensure full transparency and accountability.
+
+USDG Wallet is the name of open source software which enables the use of this currency. Based on Bitcoin Core 0.13.2.
