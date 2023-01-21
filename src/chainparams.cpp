@@ -134,27 +134,6 @@ public:
 
         genesis = CreateGenesisBlock(1657918800, 528385, 0x1e0fffff, 1, 0);
         consensus.hashGenesisBlock = genesis.GetHash();
-        //calculate main genesis block
-        /*consensus.hashGenesisBlock = uint256S("0x00");
-        if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
-		std::cout << std::string("Calculating main genesis block...\n");
-            arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
-            uint256 hash;
-            genesis.nNonce = 0;
-            while (UintToArith256(genesis.GetHash()) > hashTarget)
-            {
-                ++genesis.nNonce;
-                if (genesis.nNonce == 0)
-                {
-                    ++genesis.nTime;
-                }
-            }
-            std::cout << "Genesis block found!\n";
-            std::cout << "nonce: " << genesis.nNonce << "\n";
-            std::cout << "time: " << genesis.nTime << "\n";
-            std::cout << "blockhash: " << genesis.GetHash().ToString().c_str() << "\n";
-            std::cout << "merklehash: " << genesis.hashMerkleRoot.ToString().c_str() << "\n";
-        }*/
         assert(consensus.hashGenesisBlock == uint256S("0x00000dc29655c1eb3594818f00d5567504f8cf14b2434872ae720ead236c06a6"));
         assert(genesis.hashMerkleRoot == uint256S("0x52e750b3cf3608fa79f8477485b4a778f38d6bde11c72b8affa1ab0a637af583"));
 
@@ -236,27 +215,6 @@ public:
 
         genesis = CreateGenesisBlock(1657918880, 64302, 0x1f00ffff, 1, 0);
         consensus.hashGenesisBlock = genesis.GetHash();
-        //calculate test genesis block
-        /*consensus.hashGenesisBlock = uint256S("0x00");
-        if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
-		std::cout << std::string("Calculating testnet genesis block...\n");
-            arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
-            uint256 hash;
-            genesis.nNonce = 0;
-            while (UintToArith256(genesis.GetHash()) > hashTarget)
-            {
-                ++genesis.nNonce;
-                if (genesis.nNonce == 0)
-                {
-                    ++genesis.nTime;
-                }
-            }
-            std::cout << "Genesis block found!\n";
-            std::cout << "nonce: " << genesis.nNonce << "\n";
-            std::cout << "time: " << genesis.nTime << "\n";
-            std::cout << "blockhash: " << genesis.GetHash().ToString().c_str() << "\n";
-            std::cout << "merklehash: " << genesis.hashMerkleRoot.ToString().c_str() << "\n";
-        }*/
         assert(consensus.hashGenesisBlock == uint256S("0x0000ade4522264c59ec4b4b92dd4c8e288302fea5ce9e3992edfdd50b9f3c29a"));
         assert(genesis.hashMerkleRoot == uint256S("0xbcab77d090a581c608fc9ce97fff21297cc5e356155a5b299c2ebe4c4bf2c53a"));
 
@@ -332,27 +290,6 @@ public:
 
 	    genesis = CreateGenesisBlock(1657918888, 3727, 0x1f00ffff, 1, 0);
         consensus.hashGenesisBlock = genesis.GetHash();
-        //calculate regtest genesis block
-        /*consensus.hashGenesisBlock = uint256S("0x00");
-        if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
-		std::cout << std::string("Calculating regtest genesis block...\n");
-            arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
-            uint256 hash;
-            genesis.nNonce = 0;
-            while (UintToArith256(genesis.GetHash()) > hashTarget)
-            {
-                ++genesis.nNonce;
-                if (genesis.nNonce == 0)
-                {
-                    ++genesis.nTime;
-                }
-            }
-            std::cout << "Genesis block found!\n";
-            std::cout << "nonce: " << genesis.nNonce << "\n";
-            std::cout << "time: " << genesis.nTime << "\n";
-            std::cout << "blockhash: " << genesis.GetHash().ToString().c_str() << "\n";
-            std::cout << "merklehash: " << genesis.hashMerkleRoot.ToString().c_str() << "\n";
-        }*/
         assert(consensus.hashGenesisBlock == uint256S("0x0000a1bf5d560b48296fea38a31a750be5b958397c3e8d28db61d04eff33f875"));
         assert(genesis.hashMerkleRoot == uint256S("0xc35c6ca889657bf233b0824161a2d1f91f4a0d9781084714dfe10bc98251a3a5"));
 
