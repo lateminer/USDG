@@ -16,7 +16,6 @@ namespace Consensus {
 enum DeploymentPos
 {
     DEPLOYMENT_TESTDUMMY,
-    DEPLOYMENT_CSV, // Deployment of BIP68, BIP112, and BIP113.
     // NOTE: Also add new deployments to VersionBitsDeploymentInfo in versionbits.cpp
     MAX_VERSION_BITS_DEPLOYMENTS
 };
@@ -63,6 +62,8 @@ struct Params {
     int64_t nTargetSpacing;
     int64_t nTargetTimespan;
     int64_t DifficultyAdjustmentInterval() const { return nTargetTimespan / nTargetSpacing; }
+    int64_t nProtocolV3_1Time;
+    bool IsProtocolV3_1(int64_t nTime) const { return nTime > nProtocolV3_1Time && nTime != 4102437600; }
     unsigned int GetTargetSpacing(int nHeight) { return nTargetSpacing; }
     int nLastPOWBlock;
     int nStakeTimestampMask;
