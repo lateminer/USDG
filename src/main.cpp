@@ -1756,7 +1756,7 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 // pre-mine 800 blocks to get 20 556 330 000 USDG.
 // continue PoW for another 400 blocks at 0.05 USDG reward and mature more blocks for staking.
 // PoW will stop at block 2400.
-// PoS will start at block 1201 at 0.00125 USDG block reward.
+// PoS will start at block 1201 at 0.0125 USDG block reward.
 CAmount GetProofOfWorkSubsidy(int nHeight)
 {
     if (nHeight <= 500) 
@@ -1769,7 +1769,7 @@ CAmount GetProofOfWorkSubsidy(int nHeight)
 
 CAmount GetProofOfStakeSubsidy()
 {
-    return COIN * 1 / 80; //0.0125 USDG PoS block reward (approx. U$2.25).
+    return COIN * 1 / 80; //0.0125 USDG PoS block reward.
 }
 
 bool IsInitialBlockDownload()

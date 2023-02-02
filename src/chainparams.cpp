@@ -211,7 +211,7 @@ public:
         nDefaultPort = 17533;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100001");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000005271db979acd550416");
 
         nPruneAfterHeight = 1000;
 
@@ -240,9 +240,10 @@ public:
 
         checkpointData = (CCheckpointData) {
                     boost::assign::map_list_of
-                    ( 0, uint256S("0x0000ade4522264c59ec4b4b92dd4c8e288302fea5ce9e3992edfdd50b9f3c29a")), //Genesis block
-                    1657918880, // * UNIX timestamp of last checkpoint block
-                    0,    // * total number of transactions between genesis and last checkpoint
+                    (     0, uint256S("0x0000ade4522264c59ec4b4b92dd4c8e288302fea5ce9e3992edfdd50b9f3c29a")) //Genesis block
+                    (  1200, uint256S("0xc28e21edf56c1f0a2cda4dda2a89f3f966c2b9b1e3fcaf71fa1f176fd7dc3305")),// Pre-mine ended
+                    1675350592, // * UNIX timestamp of last checkpoint block
+                    2514,    // * total number of transactions between genesis and last checkpoint
                                 //   (the tx=... number in the SetBestChain debug.log lines)
                     2000      // * estimated number of transactions per day after checkpoint
         };
